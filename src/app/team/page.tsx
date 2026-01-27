@@ -60,7 +60,7 @@ export default function TeamPage() {
             Our Team
           </h1>
           <p className="mt-6 text-lg leading-8 text-[#b8c5d0]">
-            Meet the team pioneering subsea intelligence through multimodal AI. Our experts combine deep learning expertise with real-world underwater operations experience.
+            Meet the team pioneering subsea intelligence through multimodal AI. Our experts combine a variety of backgrounds to deliver innovative solutions for complex underwater challenges.
           </p>
         </div>
 

@@ -123,7 +123,7 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-              className="fixed top-0 right-0 bottom-0 w-full max-w-sm bg-[#0a1628] border-l border-[#1a2d4a] z-[70] md:hidden overflow-y-auto"
+              className="fixed top-0 right-0 bottom-0 w-full max-w-[90vw] bg-[#0a1628] border-l border-[#1a2d4a] z-[70] md:hidden overflow-y-auto"
             >
               <div className="p-6 pt-20">
                 {/* Navigation Links */}
@@ -154,39 +154,6 @@ export default function Navbar() {
                     );
                   })}
                 </nav>
-
-                {/* Additional Info */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 }}
-                  className="mt-8 p-4 rounded-sm bg-gradient-to-br from-[#00e5ff]/10 to-transparent border border-[#00e5ff]/30"
-                >
-                  <h3 className="text-sm font-bold text-[#00e5ff] mb-2">Get in Touch</h3>
-                  <a
-                    href="mailto:info@deepfeat.ai"
-                    className="text-sm text-[#b8c5d0] hover:text-white transition-colors"
-                  >
-                    info@deepfeat.ai
-                  </a>
-                </motion.div>
-
-                {/* Stats */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4 }}
-                  className="mt-6 grid grid-cols-2 gap-4"
-                >
-                  <div className="p-3 rounded-sm bg-[#1a2d4a] text-center">
-                    <div className="text-xl font-bold text-[#00e5ff]">92%</div>
-                    <div className="text-xs text-[#7a8a99]">Accuracy</div>
-                  </div>
-                  <div className="p-3 rounded-sm bg-[#1a2d4a] text-center">
-                    <div className="text-xl font-bold text-[#00e5ff]">24/7</div>
-                    <div className="text-xs text-[#7a8a99]">Monitoring</div>
-                  </div>
-                </motion.div>
               </div>
             </motion.div>
           </>

@@ -20,7 +20,7 @@ const shareTechMono = Share_Tech_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'DeepFeat | Subsea Intelligence Platform',
+  title: 'DeepFeat',
   description: 'Advanced multimodal AI for port and subsea infrastructure monitoring. DeepFeat turns unstructured underwater data into actionable intelligence.',
 };
 
