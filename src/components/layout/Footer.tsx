@@ -11,7 +11,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-[#141a21] bg-[#000000]">
+    <footer className="border-t border-[#1a2d4a] bg-gradiant-to-b from-[#0a1628] to-black">
       <Container>
         <div className="py-12">
           <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
@@ -40,7 +40,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="mt-8 border-t border-[#141a21] pt-8 text-center">
+          <div className="mt-8 border-t border-[#1a2d4a] pt-8 text-center">
             <p className="text-sm text-[#7a8a99]">
               &copy; {currentYear} DeepFeat. All rights reserved.
             </p>

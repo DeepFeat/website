@@ -6,10 +6,10 @@
   --color-primary-dark: #0099cc;
   --color-primary-darker: #005f73;
 
-  /* Backgrounds */
-  --color-bg-primary: #000000;
-  --color-bg-secondary: #0a0f14;
-  --color-bg-tertiary: #1a2128;
+  /* Backgrounds - Dark Navy */
+  --color-bg-primary: #0a1628;
+  --color-bg-secondary: #0f1d32;
+  --color-bg-tertiary: #162a42;
 
   /* Text */
   --color-text-primary: #ffffff;
@@ -17,8 +17,15 @@
   --color-text-muted: #7a8a99;
 
   /* Borders */
-  --color-border: #141a21;
-  --color-border-light: #2a3844;
+  --color-border: #1a2d4a;
+  --color-border-light: #2a4060;
+
+  /* Accent Colors - Lighter Tones */
+  --color-silver: #c0c8d0;
+  --color-silver-light: #e0e4e8;
+  --color-white: #ffffff;
+  --color-platinum: #e5e8eb;
+  --color-steel: #a8b2bc;
 
   /* Spacing */
   --spacing-xs: 0.25rem;
@@ -98,4 +105,23 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-border-light);
+}
+
+/* Animations */
+@keyframes scan {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+.animate-scan {
+  animation: scan 3s linear infinite;
 }

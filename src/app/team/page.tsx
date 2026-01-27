@@ -12,36 +12,41 @@ interface TeamMember {
 const cofounders: TeamMember[] = [
   {
     id: '1',
-    name: 'Co-founder Name',
+    name: 'Matthew Bockelmann',
     role: 'Co-founder & CEO',
-    bio: 'Placeholder bio for co-founder. Replace with actual background, expertise, and vision for the company.',
+    bio: '3x Founder and Serial Entrepreneur. Studying Applied Mathematics and Economics. Past experience in enterprise sales and marketing.',
+    image: '/images/team/matt-headshot.png',
   },
   {
     id: '2',
-    name: 'Co-founder Name',
+    name: 'Ryan Klivansky',
     role: 'Co-founder & CTO',
-    bio: 'Placeholder bio for co-founder. Replace with actual technical background and experience.',
+    bio: 'Published researcher in AI and Computer Vision. Computer Engineer with a focus on Artificial Intelligence.',
+    image: '/images/team/ryan-headshot.png',
   },
 ];
 
 const advisors: TeamMember[] = [
   {
     id: '1',
-    name: 'Advisor Name',
+    name: 'Steve Mullaney',
     role: 'Strategic Advisor',
-    bio: 'Placeholder bio for advisor. Replace with actual expertise and advisory role.',
+    bio: 'Veteran executive known for scaling category-defining companies. Having led both Palo Alto Networks and Aviatrix through periods of hyper-growth, Steve provides our team with the operational playbook and industry connections required to dominate the market.',
+    image: '/images/team/mullaney-headshot.jpg',
   },
   {
     id: '2',
-    name: 'Advisor Name',
-    role: 'Technical Advisor',
-    bio: 'Placeholder bio for advisor. Replace with actual background and contributions.',
+    name: 'Don Claussen',
+    role: 'Industry Advisor',
+    bio: 'Veteran of the U.S. Army and former executive at L3Harris and Viasat, Don\'s career has been defined by delivering mission-critical technology in the most challenging environments on earth. His guidance is instrumental as we scale our product for enterprise and government sectors.',
+    image: '/images/team/don-headshot.png',
   },
   {
     id: '3',
-    name: 'Advisor Name',
-    role: 'Industry Advisor',
-    bio: 'Placeholder bio for advisor. Replace with relevant industry experience.',
+    name: 'Constantine (Dean) Macris',
+    role: 'Technical Advisor',
+    bio: 'Harbors a rare fusion of military-grade cyber defense and industrial application to DeepFeat. Currently serving as CISO at Dispel and an instructor at the U.S. Coast Guard Academy, Dean is at the forefront of protecting industrial control systems from evolving threats. His strategic guidance ensures our platform meets the highest global standards for resilience and secure remote access.',
+    image: '/images/team/dean-headshot.png',
   },
 ];
 

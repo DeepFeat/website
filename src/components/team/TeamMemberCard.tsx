@@ -18,7 +18,7 @@ export default function TeamMemberCard({
 }: TeamMemberCardProps) {
   return (
     <Card variant="elevated" padding="none" className={`overflow-hidden ${className}`}>
-      <div className="aspect-square bg-[#1a2128] relative">
+      <div className="aspect-square bg-[#162a42] relative">
         {image ? (
           <Image
             src={image}
@@ -28,7 +28,7 @@ export default function TeamMemberCard({
           />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-24 h-24 rounded-lg bg-[#0a0f14] flex items-center justify-center">
+            <div className="w-24 h-24 rounded-lg bg-[#0a1628] flex items-center justify-center">
               <span className="text-4xl text-[#7a8a99]">
                 {name.charAt(0).toUpperCase()}
               </span>

@@ -69,7 +69,7 @@ function AnimatedCounter({ value, suffix = '', prefix = '' }: { value: number; s
 
 export default function AnimatedStats() {
   return (
-    <section className="py-16 sm:py-24 bg-[#0a0f14]">
+    <section className="py-16 sm:py-24 bg-[#0a1628]">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -94,14 +94,14 @@ export default function AnimatedStats() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative rounded-sm bg-[#000000] border border-[#141a21] p-8 text-center hover:border-[#00e5ff] transition-colors group"
+              className="relative rounded-sm bg-[#061020] border border-[#1a2d4a] p-8 text-center hover:border-[#00e5ff] transition-colors group"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-[#00e5ff]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-sm" />
               <div className="relative">
                 <div className="text-4xl sm:text-5xl font-bold text-[#00e5ff] mb-2">
                   <AnimatedCounter value={stat.value} suffix={stat.suffix} prefix={stat.prefix} />
                 </div>
-                <div className="text-sm text-[#b8c5d0] font-medium tracking-wide">
+                <div className="text-sm text-[#e5e8eb] font-medium tracking-wide">
                   {stat.label}
                 </div>
               </div>

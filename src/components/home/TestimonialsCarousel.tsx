@@ -16,11 +16,11 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: '1',
-    quote: 'SubFusion AI reduced our offshore windfarm inspection time by 60% while improving defect detection accuracy. The automated reporting alone saves our team hundreds of hours per quarter.',
+    quote: 'DeepFeat reduced our port inspection time by 60% while improving defect detection accuracy. The automated reporting alone saves our team hundreds of hours per quarter.',
     author: 'Sarah Mitchell',
     role: 'Director of Operations',
-    company: 'North Atlantic Wind',
-    industry: 'Offshore Wind',
+    company: 'Atlantic Port Authority',
+    industry: 'Port Operations',
   },
   {
     id: '2',
@@ -74,7 +74,7 @@ export default function TestimonialsCarousel() {
   };
 
   return (
-    <section className="py-16 sm:py-24 bg-gradient-to-b from-[#0a0f14] to-[#000000] overflow-hidden">
+    <section className="py-16 sm:py-24 bg-[#0a1628] overflow-hidden">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -108,7 +108,7 @@ export default function TestimonialsCarousel() {
                 }}
                 className="absolute w-full"
               >
-                <div className="bg-[#0a0f14] border border-[#141a21] rounded-sm p-8 lg:p-12">
+                <div className="bg-[#0a1628] border border-[#1a2d4a] rounded-sm p-8 lg:p-12">
                   {/* Quote Icon */}
                   <div className="mb-6">
                     <svg className="w-12 h-12 text-[#00e5ff]/30" fill="currentColor" viewBox="0 0 24 24">
@@ -148,7 +148,7 @@ export default function TestimonialsCarousel() {
           <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between pointer-events-none">
             <button
               onClick={() => paginate(-1)}
-              className="pointer-events-auto -ml-4 sm:-ml-12 w-12 h-12 rounded-sm bg-[#0a0f14] border border-[#141a21] hover:border-[#00e5ff] hover:bg-[#00e5ff] text-[#b8c5d0] hover:text-[#000000] transition-all flex items-center justify-center group cursor-pointer"
+              className="pointer-events-auto -ml-4 sm:-ml-12 w-12 h-12 rounded-sm bg-[#0a1628] border border-[#1a2d4a] hover:border-[#00e5ff] hover:bg-[#00e5ff] text-[#b8c5d0] hover:text-[#000000] transition-all flex items-center justify-center group cursor-pointer"
               aria-label="Previous testimonial"
             >
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -157,7 +157,7 @@ export default function TestimonialsCarousel() {
             </button>
             <button
               onClick={() => paginate(1)}
-              className="pointer-events-auto -mr-4 sm:-mr-12 w-12 h-12 rounded-sm bg-[#0a0f14] border border-[#141a21] hover:border-[#00e5ff] hover:bg-[#00e5ff] text-[#b8c5d0] hover:text-[#000000] transition-all flex items-center justify-center group cursor-pointer"
+              className="pointer-events-auto -mr-4 sm:-mr-12 w-12 h-12 rounded-sm bg-[#0a1628] border border-[#1a2d4a] hover:border-[#00e5ff] hover:bg-[#00e5ff] text-[#b8c5d0] hover:text-[#000000] transition-all flex items-center justify-center group cursor-pointer"
               aria-label="Next testimonial"
             >
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -178,7 +178,7 @@ export default function TestimonialsCarousel() {
                 className={`w-2 h-2 rounded-full transition-all cursor-pointer ${
                   index === currentIndex
                     ? 'bg-[#00e5ff] w-8'
-                    : 'bg-[#141a21] hover:bg-[#00e5ff]/50'
+                    : 'bg-[#1a2d4a] hover:bg-[#00e5ff]/50'
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />

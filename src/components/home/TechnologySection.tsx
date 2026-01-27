@@ -39,14 +39,14 @@ const defaultFeatures: Feature[] = [
 ];
 
 export default function TechnologySection({
-  title = 'SubFusion AI Architecture',
-  subtitle = 'Multimodal fusion for subsea environments',
-  description = 'Our proprietary AI models fuse sonar imagery, optical video, and sensor telemetry into unified intelligence. Deployed on-premise or in the cloud, SubFusion delivers real-time anomaly detection with 92% accuracy across the harshest underwater conditions.',
+  title = 'DeepFeat AI Architecture',
+  subtitle = 'Multimodal fusion for port and subsea environments',
+  description = 'Our proprietary AI models fuse sonar imagery, optical video, and sensor telemetry into unified intelligence. Deployed on-premise or in the cloud, DeepFeat delivers real-time anomaly detection with 92% accuracy across the harshest underwater conditions.',
   features = defaultFeatures,
   className = '',
 }: TechnologySectionProps) {
   return (
-    <section className={`py-16 sm:py-24 bg-[#0a0f14]/50 ${className}`}>
+    <section className={`py-16 sm:py-24 bg-[#0a1628]/50 ${className}`}>
       <Container>
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -64,7 +64,7 @@ export default function TechnologySection({
           {features.map((feature) => (
             <div
               key={feature.id}
-              className="relative rounded-sm border border-[#1a2128] bg-[#0a0f14] p-6 hover:border-[#2a3844] transition-colors"
+              className="relative rounded-sm border border-[#162a42] bg-[#0a1628] p-6 hover:border-[#2a4060] transition-colors"
             >
               <div className="flex items-start gap-4">
                 {feature.icon && (

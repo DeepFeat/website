@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Container from '@/components/ui/Container';
+import MediaPlaceholder from '@/components/ui/MediaPlaceholder';
 
 interface Feature {
   id: string;
@@ -13,12 +14,16 @@ interface Feature {
   imageAlt?: string;
 }
 
+interface ProductShowcaseProps {
+  backgroundColor?: string;
+}
+
 const products: Feature[] = [
   {
-    id: 'subfusion',
-    name: 'SubFusion AI',
+    id: 'deepfeat-ai',
+    name: 'DeepFeat AI',
     title: 'Multimodal AI Fusion Engine',
-    description: 'Our proprietary deep learning models fuse sonar imagery, optical video, and sensor telemetry into unified intelligence representations. SubFusion achieves 92% anomaly detection accuracy across diverse subsea environments.',
+    description: 'Our proprietary deep learning models fuse sonar imagery, optical video, and sensor telemetry into unified intelligence representations. DeepFeat achieves 92% anomaly detection accuracy across diverse port and subsea environments.',
     features: [
       'Real-time multimodal data fusion',
       'Transfer learning across inspection types',
@@ -58,12 +63,17 @@ const products: Feature[] = [
   },
 ];
 
-export default function ProductShowcase() {
+export default function ProductShowcase({
+  backgroundColor,
+}: ProductShowcaseProps) {
   const [activeTab, setActiveTab] = useState(products[0].id);
   const activeProduct = products.find((p) => p.id === activeTab) || products[0];
 
   return (
-    <section className="py-16 sm:py-24 bg-[#000000]">
+    <section
+      className="py-16 sm:py-24 bg-[#0a1628]"
+      style={backgroundColor ? { backgroundColor } : undefined}
+    >
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -91,7 +101,7 @@ export default function ProductShowcase() {
                 ${
                   activeTab === product.id
                     ? 'bg-[#00e5ff] text-[#000000] shadow-lg shadow-[#00e5ff]/30'
-                    : 'bg-[#0a0f14] text-[#b8c5d0] border border-[#141a21] hover:border-[#00e5ff]'
+                    : 'bg-[#0a1628] text-[#b8c5d0] border border-[#1a2d4a] hover:border-[#00e5ff]'
                 }
               `}
             >
@@ -108,7 +118,7 @@ export default function ProductShowcase() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="bg-[#0a0f14] border border-[#141a21] rounded-sm p-8 lg:p-12"
+            className="bg-[#0a1628] border border-[#1a2d4a] rounded-sm p-8 lg:p-12"
           >
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Text Content */}
@@ -142,36 +152,12 @@ export default function ProductShowcase() {
               </div>
 
               {/* Visual Placeholder */}
-              <div className="relative aspect-video lg:aspect-square rounded-sm bg-gradient-to-br from-[#141a21] to-[#0a0f14] border border-[#141a21] overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-24 h-24 mx-auto mb-4 rounded-sm bg-[#00e5ff]/10 flex items-center justify-center border border-[#00e5ff]/30">
-                      <svg className="w-12 h-12 text-[#00e5ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                    <p className="text-sm text-[#7a8a99]">Product Screenshot</p>
-                  </div>
-                </div>
-                {/* Animated Grid Pattern */}
-                <div className="absolute inset-0 opacity-20">
-                  <div className="grid grid-cols-8 grid-rows-8 h-full w-full">
-                    {Array.from({ length: 64 }).map((_, i) => (
-                      <motion.div
-                        key={i}
-                        className="border border-[#00e5ff]/20"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: [0.2, 0.5, 0.2] }}
-                        transition={{
-                          duration: 3,
-                          repeat: Infinity,
-                          delay: i * 0.05,
-                        }}
-                      />
-                    ))}
-                  </div>
-                </div>
-              </div>
+              <MediaPlaceholder
+                type="demo"
+                aspectRatio="square"
+                label={`${activeProduct.name} Dashboard`}
+                className="lg:aspect-square"
+              />
             </div>
           </motion.div>
         </AnimatePresence>

@@ -23,6 +23,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
         email: formData.get('email'),
         organization: formData.get('organization'),
         message: formData.get('message'),
+        phonenumber: formData.get('phonenumber'),
       };
 
       const response = await fetch('/api/contact', {
@@ -90,7 +91,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
               id="firstName"
               name="firstName"
               required
-              className="w-full px-4 py-3 rounded-sm bg-[#0a0f14] border border-[#1a2128] text-white placeholder-[#7a8a99] focus:border-[#00e5ff] focus:ring-1 focus:ring-[#00e5ff] transition-colors"
+              className="w-full px-4 py-3 rounded-sm bg-[#0a1628] border border-[#162a42] text-white placeholder-[#7a8a99] focus:border-[#00e5ff] focus:ring-1 focus:ring-[#00e5ff] transition-colors"
               placeholder="John"
             />
           </div>
@@ -106,7 +107,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
               id="lastName"
               name="lastName"
               required
-              className="w-full px-4 py-3 rounded-sm bg-[#0a0f14] border border-[#1a2128] text-white placeholder-[#7a8a99] focus:border-[#00e5ff] focus:ring-1 focus:ring-[#00e5ff] transition-colors"
+              className="w-full px-4 py-3 rounded-sm bg-[#0a1628] border border-[#162a42] text-white placeholder-[#7a8a99] focus:border-[#00e5ff] focus:ring-1 focus:ring-[#00e5ff] transition-colors"
               placeholder="Doe"
             />
           </div>
@@ -115,7 +116,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
         <div>
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-slate-300 mb-2"
+            className="block text-sm font-medium text-[#b8c5d0] mb-2"
           >
             Email
           </label>
@@ -124,15 +125,31 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
             id="email"
             name="email"
             required
-            className="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-slate-500 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
+            className="w-full px-4 py-3 rounded-sm bg-[#0a1628] border border-[#162a42] text-white placeholder-[#7a8a99] focus:border-[#00e5ff] focus:ring-1 focus:ring-[#00e5ff] transition-colors"
             placeholder="john@example.com"
           />
         </div>
 
         <div>
           <label
+            htmlFor="phonenumber"
+            className="block text-sm font-medium text-[#b8c5d0] mb-2"
+          >
+            Phone Number
+          </label>
+          <input
+            type="text"
+            id="phonenumber"
+            name="phonenumber"
+            className="w-full px-4 py-3 rounded-sm bg-[#0a1628] border border-[#162a42] text-white placeholder-[#7a8a99] focus:border-[#00e5ff] focus:ring-1 focus:ring-[#00e5ff] transition-colors"
+            placeholder="+1 (555) 123-4567"
+          />
+        </div>
+
+        <div>
+          <label
             htmlFor="organization"
-            className="block text-sm font-medium text-slate-300 mb-2"
+            className="block text-sm font-medium text-[#b8c5d0] mb-2"
           >
             Organization
           </label>
@@ -140,7 +157,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
             type="text"
             id="organization"
             name="organization"
-            className="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-slate-500 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
+            className="w-full px-4 py-3 rounded-sm bg-[#0a1628] border border-[#162a42] text-white placeholder-[#7a8a99] focus:border-[#00e5ff] focus:ring-1 focus:ring-[#00e5ff] transition-colors"
             placeholder="Your organization"
           />
         </div>
@@ -148,7 +165,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
         <div>
           <label
             htmlFor="message"
-            className="block text-sm font-medium text-slate-300 mb-2"
+            className="block text-sm font-medium text-[#b8c5d0] mb-2"
           >
             Message
           </label>
@@ -157,7 +174,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
             name="message"
             rows={5}
             required
-            className="w-full px-4 py-3 rounded-sm bg-[#0a0f14] border border-[#1a2128] text-white placeholder-[#7a8a99] focus:border-[#00e5ff] focus:ring-1 focus:ring-[#00e5ff] transition-colors resize-none"
+            className="w-full px-4 py-3 rounded-sm bg-[#0a1628] border border-[#162a42] text-white placeholder-[#7a8a99] focus:border-[#00e5ff] focus:ring-1 focus:ring-[#00e5ff] transition-colors resize-none"
             placeholder="Tell us about your project or inquiry..."
           />
         </div>

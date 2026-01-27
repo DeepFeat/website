@@ -11,11 +11,11 @@ const variantClasses = {
   primary:
     'bg-[#0099cc] text-white hover:bg-[#005f73] focus:ring-[#00e5ff]',
   secondary:
-    'bg-[#1a2128] text-white hover:bg-[#0a0f14] focus:ring-[#00e5ff]',
+    'bg-[#162a42] text-white hover:bg-[#0a1628] focus:ring-[#00e5ff]',
   outline:
-    'border border-[#141a21] text-[#b8c5d0] hover:bg-[#0a0f14] focus:ring-[#00e5ff]',
+    'border border-[#1a2d4a] text-[#b8c5d0] hover:bg-[#0a1628] focus:ring-[#00e5ff]',
   ghost:
-    'text-[#b8c5d0] hover:bg-[#0a0f14] focus:ring-[#00e5ff]',
+    'text-[#b8c5d0] hover:bg-[#0a1628] focus:ring-[#00e5ff]',
 };
 
 const sizeClasses = {

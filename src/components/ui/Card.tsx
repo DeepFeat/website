@@ -8,9 +8,9 @@ interface CardProps {
 }
 
 const variantClasses = {
-  default: 'bg-[#0a0f14]',
-  elevated: 'bg-[#0a0f14] shadow-lg',
-  outline: 'bg-transparent border border-[#1a2128]',
+  default: 'bg-[#0f1d32] border border-[#162a42]',
+  elevated: 'bg-[#0f1d32] border border-[#162a42] shadow-lg',
+  outline: 'bg-transparent border border-[#162a42]',
 };
 
 const paddingClasses = {

@@ -12,7 +12,7 @@ const contactInfo = [
   {
     id: 'location',
     label: 'Location',
-    value: 'San Francisco, CA',
+    value: 'San Pedro, CA',
   },
 ];
 
@@ -26,7 +26,7 @@ export default function ContactPage() {
             Get in Touch
           </h1>
           <p className="mt-6 text-lg leading-8 text-[#b8c5d0]">
-            Ready to transform your subsea operations with multimodal AI? Contact us to discuss your infrastructure monitoring needs and discover how SubFusion AI delivers actionable intelligence.
+            Ready to transform your port operations with multimodal AI? Contact us to discuss your infrastructure monitoring needs and discover how DeepFeat delivers actionable intelligence.
           </p>
         </div>
 

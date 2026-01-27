@@ -11,8 +11,8 @@ interface HeroProps {
 }
 
 export default function Hero({
-  headline = 'Subsea Intelligence Platform',
-  subheadline = 'DeepFeat transforms unstructured subsea data into structured intelligence through multimodal AI. From offshore windfarms to telecommunication cables, achieve 92% anomaly detection accuracy with end-to-end automated inspections.',
+  headline = 'Infrastructure Intelligence Platform',
+  subheadline = 'We transform unstructured subsea data into structured intelligence through multimodal AI. From port infrastructure to underwater surveillance, detect anomalies with end-to-end automated inspections.',
   ctaText = 'Get in Touch',
   ctaLink = '/contact',
   className = '',

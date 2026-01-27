@@ -27,7 +27,7 @@ export default function InteractiveDemo() {
   };
 
   return (
-    <section className="py-16 sm:py-24 bg-[#000000] relative overflow-hidden">
+    <section className="py-16 sm:py-24 bg-[#0a1628] relative overflow-hidden">
       {/* Background Grid */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -45,7 +45,7 @@ export default function InteractiveDemo() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">
-            See SubFusion AI in Action
+            See DeepFeat in Action
           </h2>
           <p className="text-lg text-[#b8c5d0] max-w-2xl mx-auto">
             Watch how multimodal data transforms into actionable intelligence
@@ -71,8 +71,8 @@ export default function InteractiveDemo() {
                     <div
                       className="p-4 rounded-sm border-2 transition-all"
                       style={{
-                        backgroundColor: hoveredInput === type.id ? `${type.color}20` : '#0a0f14',
-                        borderColor: hoveredInput === type.id ? type.color : '#141a21',
+                        backgroundColor: hoveredInput === type.id ? `${type.color}20` : '#0a1628',
+                        borderColor: hoveredInput === type.id ? type.color : '#1a2d4a',
                       }}
                     >
                       <div className="flex items-center gap-3">
@@ -110,10 +110,10 @@ export default function InteractiveDemo() {
                   className="relative w-48 h-48"
                 >
                   <div className="absolute inset-0 rounded-sm bg-gradient-to-br from-[#00e5ff] to-[#005f73] opacity-20 blur-xl" />
-                  <div className="absolute inset-0 rounded-sm border-2 border-[#00e5ff] bg-[#0a0f14] flex items-center justify-center">
+                  <div className="absolute inset-0 rounded-sm border-2 border-[#00e5ff] bg-[#0a1628] flex items-center justify-center">
                     <div className="text-center">
                       <div className="text-4xl mb-2">🧠</div>
-                      <div className="text-sm font-bold text-[#00e5ff]">SubFusion AI</div>
+                      <div className="text-sm font-bold text-[#00e5ff]">DeepFeat AI</div>
                       {isProcessing && (
                         <motion.div
                           initial={{ opacity: 0 }}
@@ -189,7 +189,7 @@ export default function InteractiveDemo() {
                         transition={{ duration: 0.5, delay: 1 + index * 0.1 }}
                       />
                     )}
-                    <div className="p-4 rounded-sm border border-[#141a21] bg-[#0a0f14] hover:border-[#00e5ff] transition-all">
+                    <div className="p-4 rounded-sm border border-[#1a2d4a] bg-[#0a1628] hover:border-[#00e5ff] transition-all">
                       <div className="flex items-center gap-3">
                         <span className="text-2xl">{output.icon}</span>
                         <span className="text-white font-medium">{output.label}</span>

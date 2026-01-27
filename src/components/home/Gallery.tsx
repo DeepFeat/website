@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Container from '@/components/ui/Container';
 import Card from '@/components/ui/Card';
+import MediaPlaceholder from '@/components/ui/MediaPlaceholder';
 
 interface GalleryItem {
   id: string;
@@ -15,6 +16,7 @@ interface GalleryProps {
   items: GalleryItem[];
   columns?: 2 | 3 | 4;
   className?: string;
+  backgroundColor?: string;
 }
 
 const columnClasses = {
@@ -29,9 +31,13 @@ export default function Gallery({
   items,
   columns = 3,
   className = '',
+  backgroundColor,
 }: GalleryProps) {
   return (
-    <section className={`py-16 sm:py-24 ${className}`}>
+    <section
+      className={`py-16 sm:py-24 ${className}`}
+      style={backgroundColor ? { backgroundColor } : undefined}
+    >
       <Container>
         {(title || subtitle) && (
           <div className="mx-auto max-w-2xl text-center mb-12">
@@ -51,20 +57,22 @@ export default function Gallery({
         <div className={`grid gap-8 ${columnClasses[columns]}`}>
           {items.map((item) => (
             <Card key={item.id} variant="elevated" padding="none" className="overflow-hidden">
-              <div className="aspect-video bg-[#1a2128] relative">
-                {item.image ? (
+              {item.image ? (
+                <div className="aspect-video bg-[#162a42] relative">
                   <Image
                     src={item.image}
                     alt={item.title}
                     fill
                     className="object-cover"
                   />
-                ) : (
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-[#7a8a99] text-sm">Image Placeholder</span>
-                  </div>
-                )}
-              </div>
+                </div>
+              ) : (
+                <MediaPlaceholder
+                  type="image"
+                  aspectRatio="video"
+                  label={item.title}
+                />
+              )}
               <div className="p-6">
                 <h3 className="text-lg font-semibold text-white">
                   {item.title}

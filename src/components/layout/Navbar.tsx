@@ -40,7 +40,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 border-b border-[#141a21] bg-[#000000]/95 backdrop-blur-sm">
+      <nav className="sticky top-0 z-50 border-b border-[#1a2d4a] bg-[#0a1628]/95 backdrop-blur-sm">
         <Container>
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
@@ -123,7 +123,7 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-              className="fixed top-0 right-0 bottom-0 w-full max-w-sm bg-[#0a0f14] border-l border-[#141a21] z-[70] md:hidden overflow-y-auto"
+              className="fixed top-0 right-0 bottom-0 w-full max-w-sm bg-[#0a1628] border-l border-[#1a2d4a] z-[70] md:hidden overflow-y-auto"
             >
               <div className="p-6 pt-20">
                 {/* Navigation Links */}
@@ -144,7 +144,7 @@ export default function Navbar() {
                             block px-4 py-4 rounded-sm text-lg font-medium transition-all
                             ${isActive
                               ? 'bg-[#00e5ff]/10 text-[#00e5ff] border-l-4 border-[#00e5ff]'
-                              : 'text-[#b8c5d0] hover:bg-[#141a21] hover:text-white border-l-4 border-transparent'
+                              : 'text-[#b8c5d0] hover:bg-[#1a2d4a] hover:text-white border-l-4 border-transparent'
                             }
                           `}
                         >
@@ -178,11 +178,11 @@ export default function Navbar() {
                   transition={{ delay: 0.4 }}
                   className="mt-6 grid grid-cols-2 gap-4"
                 >
-                  <div className="p-3 rounded-sm bg-[#141a21] text-center">
+                  <div className="p-3 rounded-sm bg-[#1a2d4a] text-center">
                     <div className="text-xl font-bold text-[#00e5ff]">92%</div>
                     <div className="text-xs text-[#7a8a99]">Accuracy</div>
                   </div>
-                  <div className="p-3 rounded-sm bg-[#141a21] text-center">
+                  <div className="p-3 rounded-sm bg-[#1a2d4a] text-center">
                     <div className="text-xl font-bold text-[#00e5ff]">24/7</div>
                     <div className="text-xs text-[#7a8a99]">Monitoring</div>
                   </div>
