@@ -39,7 +39,7 @@ export async function POST(request: Request) {
 
     // Send email via Resend
     const { error } = await resend.emails.send({
-      from: 'DeepFeat Contact Form <onboarding@resend.dev>',
+      from: 'DeepFeat Contact Form <info@deepfeat.ai>',
       to: process.env.CONTACT_EMAIL || 'info@deepfeat.ai',
       replyTo: email,
       subject: `New Contact Form Submission from ${firstName} ${lastName}`,
