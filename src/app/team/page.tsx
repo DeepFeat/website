@@ -14,7 +14,7 @@ const cofounders: TeamMember[] = [
     id: '1',
     name: 'Matthew Bockelmann',
     role: 'Co-founder & CEO',
-    bio: '3x Founder and Serial Entrepreneur. Studying Applied Mathematics and Economics. Past experience in enterprise sales and marketing.',
+    bio: '3x Founder and Serial Entrepreneur. Past experience in enterprise sales and marketing.',
     image: '/images/team/matt-headshot.png',
   },
   {
@@ -23,6 +23,16 @@ const cofounders: TeamMember[] = [
     role: 'Co-founder & CTO',
     bio: 'Published researcher in AI and Computer Vision. Computer Engineer with a focus on Artificial Intelligence.',
     image: '/images/team/ryan-headshot.png',
+  },
+];
+
+const team: TeamMember[] = [
+  {
+    id: '1',
+    name: 'Anissa M. Elias',
+    role: 'Founding Engineer',
+    bio: 'Ph.D. researcher specializing in maritime cyber-physical system security, autonomous monitoring, and on-edge AI.',
+    image: '/images/team/anissa-headshot.jpg',
   },
 ];
 
@@ -79,6 +89,26 @@ export default function TeamPage() {
                 image={member.image}
               />
             ))}
+          </div>
+        </section>
+
+        {/* Team Section */}
+        <section className="mb-20">
+          <h2 className="text-2xl font-bold text-white mb-8 text-center">
+            Team
+          </h2>
+          <div className="flex justify-center max-w-4xl mx-auto">
+            <div className="max-w-md w-full">
+              {team.map((member) => (
+                <TeamMemberCard
+                  key={member.id}
+                  name={member.name}
+                  role={member.role}
+                  bio={member.bio}
+                  image={member.image}
+                />
+              ))}
+            </div>
           </div>
         </section>
 
